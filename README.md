@@ -1,8 +1,7 @@
 # 🎬 CineGraph — TMDB Movies, TV & People Dataset (2026 Edition)
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![TMDB](https://img.shields.io/badge/Source-TMDB%20API-01B4E4)](https://www.themoviedb.org/)
-[![Format](https://img.shields.io/badge/Format-CSV%20UTF--8%20BOM-green)](.)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) [![TMDB](https://img.shields.io/badge/Source-TMDB%20API-01B4E4)](https://www.themoviedb.org/) [![Starter Notebook](https://img.shields.io/badge/Notebook-Kaggle%20Starter-F29111?logo=kaggle)](https://www.kaggle.com/code/muhammetyorulmaz1/cinegraph-dataset-overview) [![Kaggle Dataset](https://img.shields.io/badge/Dataset-Kaggle-blue?logo=kaggle)](https://www.kaggle.com/datasets/muhammetyorulmaz1/cinegraph-tmdb-movies-tv-and-people-dataset)
+
 
 A structured TMDB dataset builder for film, television, and biographical
 content — designed as the input layer for analytics, recommendation,
@@ -155,21 +154,43 @@ Detailed design rationale in [`docs/ARCHITECTURE.md`](docs/ARCHITECTURE.md).
 ## Analysis notebook
 
 A ready-to-run walk-through of the dataset lives at
-[`notebooks/dataset_overview.ipynb`](notebooks/dataset_overview.ipynb).
+[`notebooks/cinegraph_dataset_overview.ipynb`](notebooks/cinegraph_dataset_overview.ipynb).
 It covers:
 
-1. Loading and schema summary
-2. Release-year, language, and genre distributions
-3. Watch-provider coverage by country
-4. Recommendation-graph integrity with and without orphans
-5. Cast / people join integrity
-6. Review statistics (per-title density, length, rating)
-7. People demographics and practical coverage test
-8. Data-quality audit of critical columns
+* Setup & Data Loading
+* What's Inside
+* 1\. Corpus Snapshot
+* 2\. Content Distributions
+  * 2.1 Release Year
+  * 2.2 Language Distribution
+  * 2.3 Genre Landscape
+* 3\. Financial Analysis
+  * 3.1 Budget vs. Revenue Overview
+  * 3.2 ROI by Genre
+  * 3.3 Budget vs. Revenue Scatter
+* 4\. Streaming Availability
+  * 4.1 Coverage by Provider Column
+  * 4.2 Top Streaming Services
+* 5\. Recommendation-Graph Coverage
+* 6\. Cast & People Join Integrity
+  * 6.1 Join Coverage
+  * 6.2 People Activity Breakdown
+* 7\. Review Statistics
+* 8\. People Demographics
+* 9\. Data-Quality Audit
+* 10\. TV Show Specifics
+* 11\. Quick-Start Guide
+  * 11.1 Loading (Kaggle & Local)
+  * 11.2 Parsing Comma-Separated ID Columns
+  * 11.3 Joining Titles with People
+  * 11.4 Building the Recommendation Graph
+* 12\. Suggested Use Cases
+  * 12.1 Sample — Sentiment Starter
+* 13\. Schema Reference
 
 ```bash
 pip install -r requirements-dev.txt
-jupyter notebook notebooks/dataset_overview.ipynb
+jupyter notebook notebooks/cinegraph_dataset_overview.ipynb
 ```
 
 ---

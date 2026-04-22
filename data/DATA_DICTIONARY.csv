@@ -1,0 +1,170 @@
+﻿file_name,column_name,data_type,nullable,description,example
+movies.csv,tmdb_id,int,No,Unique TMDB movie identifier (primary key),603
+movies.csv,imdb_id,str,Yes,IMDb identifier,tt0133093
+movies.csv,title,str,No,English display title,The Matrix
+movies.csv,original_title,str,Yes,Native-language title,The Matrix
+movies.csv,original_language,str,Yes,ISO 639-1 language code,en
+movies.csv,alternative_titles,str,Yes,Pipe-separated list of CC:Title pairs,TR:Matriks | DE:Matrix
+movies.csv,tagline,str,Yes,Promotional tagline,Welcome to the Real World
+movies.csv,overview,str,Yes,English synopsis (null ~4.2% of rows),A computer hacker learns...
+movies.csv,release_date,str,Yes,First release date YYYY-MM-DD,1999-03-31
+movies.csv,release_year,int,Yes,Release year derived from release_date,1999
+movies.csv,runtime_min,int,Yes,Runtime in minutes,136
+movies.csv,status,str,Yes,Release status,Released
+movies.csv,vote_average,float,Yes,TMDB user rating 0-10,8.2
+movies.csv,vote_count,int,Yes,Total number of votes,24000
+movies.csv,popularity,float,Yes,TMDB popularity score,47.3
+movies.csv,budget_usd,float,Yes,Production budget in USD; null if unknown,63000000
+movies.csv,revenue_usd,float,Yes,Box-office gross in USD; null if unknown,467000000
+movies.csv,profit_usd,float,Yes,revenue_usd minus budget_usd; null if either input is null,404000000
+movies.csv,roi_pct,float,Yes,Return-on-investment percentage; null if budget is null,641.3
+movies.csv,genres,str,Yes,Comma-separated genre names (null ~5.1%),"Action, Science Fiction"
+movies.csv,keywords,str,Yes,Comma-separated TMDB keywords,"dystopia, artificial intelligence"
+movies.csv,us_certification,str,Yes,US theatrical certification (MPAA type 3),R
+movies.csv,production_companies,str,Yes,Comma-separated production company names,"Warner Bros., Village Roadshow"
+movies.csv,production_countries,str,Yes,Comma-separated ISO 3166-1 country codes,"US, AU"
+movies.csv,spoken_languages,str,Yes,Languages spoken in the film,"English, Japanese"
+movies.csv,collection_id,int,Yes,TMDB franchise/collection ID,2344
+movies.csv,collection_name,str,Yes,Franchise name,The Matrix Collection
+movies.csv,cast_names,str,Yes,Top-15 cast names comma-separated (null ~7.3%),"Keanu Reeves, Laurence Fishburne"
+movies.csv,cast_ids,str,Yes,Top-15 cast TMDB IDs; join to people.tmdb_id,"6384, 2975"
+movies.csv,cast_characters,str,Yes,Characters played; parallel to cast_names,"Neo, Morpheus"
+movies.csv,directors,str,Yes,Director names comma-separated (null ~1.7%),"Lana Wachowski, Lilly Wachowski"
+movies.csv,director_ids,str,Yes,Director TMDB IDs; join to people.tmdb_id,"9340, 9341"
+movies.csv,writers,str,Yes,Up-to-5 writing credits,Lana Wachowski
+movies.csv,producers,str,Yes,Top-3 producers,Joel Silver
+movies.csv,composers,str,Yes,Top-2 composers,Don Davis
+movies.csv,has_trailer,bool,Yes,True if a YouTube trailer exists,True
+movies.csv,trailer_url,str,Yes,First trailer URL,https://youtube.com/watch?v=vKQi3bBA1y8
+movies.csv,similar_ids,str,Yes,Top-5 similar-movie TMDB IDs; resolves in movies or orphan_movies,"604, 605"
+movies.csv,similar_titles,str,Yes,Top-5 similar-movie titles,The Matrix Reloaded
+movies.csv,recommended_ids,str,Yes,Top-5 recommended TMDB IDs; resolves 100% with orphan_movies,"78, 680"
+movies.csv,recommended_titles,str,Yes,Top-5 recommended titles,Pulp Fiction
+movies.csv,poster_url,str,Yes,Poster image URL at w500 size,https://image.tmdb.org/t/p/w500/...
+movies.csv,poster_url_hd,str,Yes,Poster image URL at original size,https://image.tmdb.org/t/p/original/...
+movies.csv,backdrop_url,str,Yes,Backdrop image URL at w780 size,https://image.tmdb.org/t/p/w780/...
+movies.csv,homepage,str,Yes,Official film website,https://www.whatisthematrix.com
+movies.csv,watch_tr_flatrate,str,Yes,Turkish subscription streaming services,"Netflix, Amazon Prime"
+movies.csv,watch_tr_rent,str,Yes,Turkish rental services,Apple TV
+movies.csv,watch_tr_buy,str,Yes,Turkish purchase services,Google Play Movies
+movies.csv,watch_tr_free,str,Yes,Turkish ad-supported services,Tubi
+movies.csv,watch_tr_link,str,Yes,TMDB Turkish watch page URL,https://www.themoviedb.org/movie/603/watch?locale=TR
+movies.csv,watch_us_flatrate,str,Yes,US subscription streaming services,Netflix
+movies.csv,watch_us_rent,str,Yes,US rental services,Amazon Video
+movies.csv,watch_us_buy,str,Yes,US purchase services,Vudu
+movies.csv,watch_us_free,str,Yes,US ad-supported services,Tubi
+movies.csv,watch_us_link,str,Yes,TMDB US watch page URL,https://www.themoviedb.org/movie/603/watch?locale=US
+tv_shows.csv,tmdb_id,int,No,Unique TMDB series identifier (primary key),1396
+tv_shows.csv,imdb_id,str,Yes,IMDb series identifier,tt0903747
+tv_shows.csv,tvdb_id,int,Yes,TheTVDB identifier,81189
+tv_shows.csv,title,str,No,English series name,Breaking Bad
+tv_shows.csv,original_title,str,Yes,Native-language series name,Breaking Bad
+tv_shows.csv,original_language,str,Yes,ISO 639-1 code,en
+tv_shows.csv,alternative_titles,str,Yes,Pipe-separated CC:Title pairs,DE:Breaking Bad
+tv_shows.csv,tagline,str,Yes,Promotional tagline,Change the channel
+tv_shows.csv,overview,str,Yes,English synopsis (null ~5.4%),A chemistry teacher...
+tv_shows.csv,first_air_date,str,Yes,Date of first episode YYYY-MM-DD,2008-01-20
+tv_shows.csv,last_air_date,str,Yes,Date of last aired episode,2013-09-29
+tv_shows.csv,release_year,int,Yes,Year derived from first_air_date,2008
+tv_shows.csv,status,str,Yes,Ended / Returning Series / Canceled / etc.,Ended
+tv_shows.csv,in_production,bool,Yes,True if new episodes are still being made,False
+tv_shows.csv,show_type,str,Yes,Scripted / Reality / Documentary / Talk Show / etc.,Scripted
+tv_shows.csv,number_of_seasons,int,Yes,Total season count including specials,5
+tv_shows.csv,number_of_episodes,int,Yes,Total episode count,62
+tv_shows.csv,avg_episode_runtime,int,Yes,Mean episode runtime in minutes,47
+tv_shows.csv,season_count,int,Yes,Season count excluding season 0 (specials),5
+tv_shows.csv,vote_average,float,Yes,User rating 0-10,9.5
+tv_shows.csv,vote_count,int,Yes,Total votes,13000
+tv_shows.csv,popularity,float,Yes,TMDB popularity score,369.6
+tv_shows.csv,genres,str,Yes,Comma-separated genre names (null ~1.6%),"Drama, Crime"
+tv_shows.csv,keywords,str,Yes,Comma-separated TMDB keywords,"drug trade, chemistry"
+tv_shows.csv,networks,str,Yes,Broadcasting network names,AMC
+tv_shows.csv,network_ids,str,Yes,Network TMDB IDs,174
+tv_shows.csv,origin_countries,str,Yes,Comma-separated ISO 3166-1 country codes,US
+tv_shows.csv,spoken_languages,str,Yes,Languages spoken on air,"English, Spanish"
+tv_shows.csv,production_companies,str,Yes,Production company names,High Bridge Productions
+tv_shows.csv,creators,str,Yes,Creator names (null ~39.5% — many shows list none),Vince Gilligan
+tv_shows.csv,creator_ids,str,Yes,Creator TMDB IDs; join to people.tmdb_id,66633
+tv_shows.csv,cast_names,str,Yes,Top-15 cast names (null ~6.8%),"Bryan Cranston, Aaron Paul"
+tv_shows.csv,cast_ids,str,Yes,Top-15 cast TMDB IDs; join to people.tmdb_id,"17419, 84497"
+tv_shows.csv,cast_characters,str,Yes,Characters played; parallel to cast_names,"Walter White, Jesse Pinkman"
+tv_shows.csv,writers,str,Yes,Writing department credits,Vince Gilligan
+tv_shows.csv,similar_ids,str,Yes,Top-5 similar-series IDs,1438
+tv_shows.csv,similar_titles,str,Yes,Top-5 similar-series names,The Wire
+tv_shows.csv,recommended_ids,str,Yes,Top-5 recommended series IDs,60574
+tv_shows.csv,recommended_titles,str,Yes,Top-5 recommended series names,Peaky Blinders
+tv_shows.csv,poster_url,str,Yes,Poster URL at w500 size,https://image.tmdb.org/t/p/w500/...
+tv_shows.csv,poster_url_hd,str,Yes,Poster URL at original size,https://image.tmdb.org/t/p/original/...
+tv_shows.csv,backdrop_url,str,Yes,Backdrop URL at w780 size,https://image.tmdb.org/t/p/w780/...
+tv_shows.csv,homepage,str,Yes,Official series website,https://www.amctv.com/shows/breaking-bad
+tv_shows.csv,watch_tr_flatrate,str,Yes,Turkish subscription services,Netflix
+tv_shows.csv,watch_tr_rent,str,Yes,Turkish rental services,Apple TV
+tv_shows.csv,watch_tr_buy,str,Yes,Turkish purchase services,Google Play Movies
+tv_shows.csv,watch_tr_free,str,Yes,Turkish ad-supported services,
+tv_shows.csv,watch_tr_link,str,Yes,TMDB Turkish watch page URL,https://www.themoviedb.org/tv/1396/watch?locale=TR
+tv_shows.csv,watch_us_flatrate,str,Yes,US subscription services,"Netflix, AMC+"
+tv_shows.csv,watch_us_rent,str,Yes,US rental services,Amazon Video
+tv_shows.csv,watch_us_buy,str,Yes,US purchase services,Vudu
+tv_shows.csv,watch_us_free,str,Yes,US ad-supported services,
+tv_shows.csv,watch_us_link,str,Yes,TMDB US watch page URL,https://www.themoviedb.org/tv/1396/watch?locale=US
+tv_shows.csv,cert_tr,str,Yes,Turkish content rating,18+
+tv_shows.csv,cert_us,str,Yes,US content rating,TV-MA
+people.csv,tmdb_id,int,No,Unique TMDB person identifier (primary key),6384
+people.csv,imdb_id,str,Yes,IMDb person identifier,nm0000206
+people.csv,instagram_id,str,Yes,Instagram handle,keanu
+people.csv,twitter_id,str,Yes,Twitter/X handle,KeanuReeves
+people.csv,name,str,No,Full name,Keanu Reeves
+people.csv,also_known_as,str,Yes,Comma-separated aliases and transliterations,基努·里維斯
+people.csv,gender,str,Yes,Male / Female / Non-binary / Unspecified,Male
+people.csv,birthday,str,Yes,Date of birth YYYY-MM-DD,1964-09-02
+people.csv,deathday,str,Yes,Date of death; null if living,
+people.csv,place_of_birth,str,Yes,Birthplace,"Beirut, Lebanon"
+people.csv,known_for_dept,str,No,Primary department: Acting / Directing / etc.,Acting
+people.csv,biography,str,Yes,Biographical text HTML-cleaned (null ~39.4%),Keanu Charles Reeves...
+people.csv,popularity,float,Yes,TMDB popularity score,50.4
+people.csv,known_movies,str,Yes,Top-15 movie role titles by popularity,"The Matrix, John Wick"
+people.csv,known_movie_ids,str,Yes,Corresponding TMDB movie IDs; join to movies or orphan_movies,"603, 245891"
+people.csv,total_movie_credits,int,Yes,Count of all movie cast credits,46
+people.csv,directed_movies,str,Yes,Top-8 directed movie titles,
+people.csv,directed_movie_ids,str,Yes,Corresponding TMDB movie IDs,
+people.csv,total_directed,int,Yes,Count of all director credits,0
+people.csv,known_tv_shows,str,Yes,Top-10 TV role titles by popularity,
+people.csv,known_tv_ids,str,Yes,Corresponding TMDB TV IDs; join to tv_shows or orphan_tv,
+people.csv,total_tv_credits,int,Yes,Count of all TV cast credits,3
+people.csv,profile_url,str,Yes,Profile photo URL at h632 size,https://image.tmdb.org/t/p/h632/...
+people.csv,homepage,str,Yes,Personal website,
+orphan_movies.csv,tmdb_id,int,No,Unique TMDB movie identifier (primary key),11
+orphan_movies.csv,imdb_id,str,Yes,IMDb identifier,tt0076759
+orphan_movies.csv,title,str,No,English display title,Star Wars
+orphan_movies.csv,original_language,str,Yes,ISO 639-1 language code,en
+orphan_movies.csv,release_year,int,Yes,Release year,1977
+orphan_movies.csv,overview,str,Yes,English synopsis,Luke Skywalker joins the rebellion...
+orphan_movies.csv,genres,str,Yes,Comma-separated genre names,"Adventure, Action, Science Fiction"
+orphan_movies.csv,vote_average,float,Yes,TMDB user rating 0-10,8.2
+orphan_movies.csv,vote_count,int,Yes,Total votes (min threshold applied at collection time),19000
+orphan_movies.csv,poster_url,str,Yes,Poster URL at w500 size,https://image.tmdb.org/t/p/w500/...
+orphan_tv.csv,tmdb_id,int,No,Unique TMDB series identifier (primary key),456
+orphan_tv.csv,title,str,No,English series name,The Simpsons
+orphan_tv.csv,original_language,str,Yes,ISO 639-1 language code,en
+orphan_tv.csv,release_year,int,Yes,Year of first air date,1989
+orphan_tv.csv,overview,str,Yes,English synopsis,The Simpsons...
+orphan_tv.csv,genres,str,Yes,Comma-separated genre names,"Animation, Comedy"
+orphan_tv.csv,vote_average,float,Yes,TMDB user rating 0-10,8.0
+orphan_tv.csv,vote_count,int,Yes,Total votes,8000
+orphan_tv.csv,poster_url,str,Yes,Poster URL at w500 size,https://image.tmdb.org/t/p/w500/...
+movie_reviews.csv,review_id,str,No,TMDB review identifier (primary key),5d6a3f2bc3a3686...
+movie_reviews.csv,tmdb_id,int,No,Parent movie ID; foreign key to movies.tmdb_id,603
+movie_reviews.csv,media_type,str,No,Always 'movie' in this file,movie
+movie_reviews.csv,author,str,Yes,Author username on TMDB,MovieFan42
+movie_reviews.csv,rating,float,Yes,Author's rating 0-10; null if not provided,8.5
+movie_reviews.csv,content,str,No,Review body HTML-cleaned capped at 3000 characters,One of the greatest...
+movie_reviews.csv,created_at,str,Yes,ISO 8601 creation timestamp,2019-03-31T22:12:00.000Z
+movie_reviews.csv,url,str,Yes,Review permalink on TMDB,https://www.themoviedb.org/review/5d6a...
+tv_reviews.csv,review_id,str,No,TMDB review identifier (primary key),abc123
+tv_reviews.csv,tmdb_id,int,No,Parent series ID; foreign key to tv_shows.tmdb_id,1396
+tv_reviews.csv,media_type,str,No,Always 'tv' in this file,tv
+tv_reviews.csv,author,str,Yes,Author username on TMDB,TVCritic99
+tv_reviews.csv,rating,float,Yes,Author's rating 0-10; null if not provided,9.0
+tv_reviews.csv,content,str,No,Review body HTML-cleaned capped at 3000 characters,Absolute masterpiece...
+tv_reviews.csv,created_at,str,Yes,ISO 8601 creation timestamp,2014-01-05T10:00:00.000Z
+tv_reviews.csv,url,str,Yes,Review permalink on TMDB,https://www.themoviedb.org/review/abc123
